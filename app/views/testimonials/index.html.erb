@@ -1,0 +1,27 @@
+<div id="content">
+	<div class="fL" style="width:685px">
+		<div style="padding:17px 55px 55px 88px">
+			<div class="pict_box_01">
+				<span>Testimonials</span><br/>
+				What are people saying
+			</div><br class="sp13"/>
+			<% if @testimonials %>
+				<% @testimonials.each do |t| %>
+					<%= render 'testimonials/display_testimonial', :t => t%>
+				<% end %>
+			<% end %>
+			<br class="sp52"/>
+
+			<div class="cL"></div>
+		</div>
+	</div>
+	<%= render 'pages/phone' %>
+	<div class="fL">
+		<div id="pretty-form">
+			<%= link_to 'New Testimonial', new_testimonial_path, :class=> 'button-link'%>
+		</div>
+	</div>
+
+	<div class="cL"></div>
+</div>
+

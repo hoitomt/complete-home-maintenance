@@ -1,0 +1,42 @@
+<%= form_for(@testimonial, :html => {:id => "pretty-form"}) do |f| %>
+  <% if @testimonial.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@testimonial.errors.count, "error") %> prohibited this testimonial from being saved:</h2>
+
+      <ul>
+      <% @testimonial.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	<fieldset>
+		<ol>
+			<li>
+				<%= f.label :first_name %>
+		    <%= f.text_field :first_name %>
+			</li>
+			<li>
+				<%= f.label :email, "Email#{mark_required(@testimonial, :email) }" %>
+		    <%= f.text_field :email, :placeholder => "Required for confirmation" %>
+			</li>
+			<li>
+				<%= f.label :location %>
+		    <%= f.text_field :location %>
+			</li>
+			<li>
+				<%= f.label :comment %>
+    		<%= f.text_area :comment, :rows => 5 %>
+			</li>
+		</ol>
+		
+	</fieldset>
+	<fieldset>
+		<%= link_to "Cancel", :back, :class => "left-button button-link" %>
+		<button type=submit class="right-button">Save</button>
+	</fieldset>
+<% end %>
+
+
+
+

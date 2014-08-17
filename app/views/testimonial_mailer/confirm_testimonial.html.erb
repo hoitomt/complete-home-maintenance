@@ -1,0 +1,20 @@
+<p style="font-family: Arial; font-weight: bold; font-size:14px;">
+	Please Confirm Your Testimonial for Complete Home Maintenance
+</p>
+<p>
+	Please click the link below to confirm the testimonial that you created for
+	Complete Home Maintenance. 
+</p>
+<%= link_to 'Confirm Testimonial', "http://www.complete-home-maintenance.com/testimonials/confirm/#{@testimonial.id}"%><br />
+
+<div style="border: 1px solid #000; padding: 5px; margin-top: 10px;">
+	<strong><%= @testimonial.first_name %> - <%= @testimonial.location %></strong><br />
+	<p><%= @testimonial.comment %></p>
+</div>
+<p>
+	If you would like to change your testimonial or if you would rather not post it to the
+	website then do not click the link above. You can create a 
+	<%= link_to 'new testimonial', "http://www.complete-home-maintenance.com/testimonials/new" %> 
+	on the website.
+</p>
+<p><strong>Thank you for your feedback</strong></p>

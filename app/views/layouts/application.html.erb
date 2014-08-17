@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Complete Home Maintenance</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+	<%= render 'layouts/google_analytics' %>
+	
+	<%= javascript_tag do %>
+	//is this right?
+		$(document).ready(function() {
+			var currentUrl = $(location).attr('href');
+			if(currentUrl.match(/projects/)) {
+				$('#projects').addClass("selected");
+			} else if(currentUrl.match(/testimonials/)) {
+				$('#testimonials').addClass("selected");
+			} else if(currentUrl.match(/contact/)) {
+				$('#contact').addClass("selected");
+			}	else if(currentUrl.match(/\//)) {
+				$('#home').addClass("selected");
+			}
+		})
+	<% end %>
+</head>
+<body>
+	<div id="container">
+		<%= render 'layouts/header' %>
+		<%= yield %>
+		<%= render 'layouts/footer' %>
+	</div>
+
+</body>
+</html>

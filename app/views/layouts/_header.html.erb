@@ -1,0 +1,31 @@
+<div id="header">
+	<div id="head_01">
+		<div class="menu_box">
+			<div class="h_pad_01">
+				<div class="menu menu_1">
+					<div class="ml_1">
+						<%= link_to 'Home', root_path, :id => "home", :class => "not-selected" %>
+					</div>
+					<div class="ml_2">
+						<%= link_to 'Projects', pages_projects_path, :id => "projects", :class => "not-selected" %>
+					</div>
+				</div>
+				<div class="slog_box">
+					<%= link_to root_path do %>
+						<span>
+						<div class="brand">Complete Home Maintenance</div>
+						</span>
+					<% end %>
+				</div>
+				<div class="menu menu_2">
+					<div class="ml_3">
+						<%= link_to 'Testimonials', testimonials_path, :id => "testimonials", :class => "not-selected" %>
+					</div>
+					<div class="ml_4">
+						<%= link_to 'Contact Us', pages_contact_path, :id => "contact", :class => "not-selected" %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

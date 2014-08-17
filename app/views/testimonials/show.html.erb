@@ -1,0 +1,16 @@
+<div id="content">
+	<div class="fL" style="width:685px">
+		<div style="padding:17px 55px 55px 88px">
+			<% if @testimonial.visible == "N" %>
+				<%= render 'testimonials/confirmation/unconfirmed' %>
+			<% else %>
+				<%= render 'testimonials/confirmation/confirmed' %>
+			<% end %>
+			<div class="cL"></div>
+		</div>
+	</div>
+	<%= render 'pages/phone' %>
+
+	<div class="cL"></div>
+</div>
+
