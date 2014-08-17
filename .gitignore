@@ -13,3 +13,5 @@
 
 # Ignore vendored gems
 /vendor/ruby
+
+.env
